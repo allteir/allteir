@@ -1,0 +1,204 @@
+
+*{margin: 0;padding: 0;}
+
+/* Animasi teks */
+.rgb-text {
+  text-transform: uppercase;
+  background: linear-gradient(90deg,red, red, red, orange, yellow, aqua, green, red, red,red);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rgbAnimation 5s linear infinite ;
+}
+
+/* Animasi gradien RGB */
+@keyframes rgbAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Kotak dengan animasi box-shadow */
+.animated-box {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: rgbShadow 3s linear infinite;
+}
+
+/* Animasi RGB Box Shadow */
+@keyframes rgbShadow {
+  0% {
+    box-shadow: -1px 0 3px rgba(255, 0, 0, 0.8), 
+                1px 0 3px rgba(0, 255, 0, 0.8), 
+                0 1px 3px rgba(0, 0, 255, 0.8);
+  }
+  25% {
+    box-shadow: -1px 0 3px rgba(0, 255, 0, 0.8), 
+                1px 0 3px rgba(0, 0, 255, 0.8), 
+                0 1px 3px rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: -1px 0 3px rgba(0, 0, 255, 0.8), 
+                1px 0 3px rgba(255, 0, 0, 0.8), 
+                0 1px 3px rgba(0, 255, 0, 0.8);
+  }
+  75% {
+    box-shadow: -1px 0 3px rgba(255, 0, 0, 0.8), 
+                1px 0 3px rgba(0, 255, 0, 0.8), 
+                0 1px 3px rgba(0, 0, 255, 0.8);
+  }
+  100% {
+    box-shadow: -1px 0 3px rgba(255, 0, 0, 0.8), 
+                1px 0 3px rgba(0, 255, 0, 0.8), 
+                0 1px 3px rgba(0, 0, 255, 0.8);
+  }
+}
+
+
+/* Hover efek untuk kotak */
+.animated-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+   
+/* Global Styling */
+
+.container{
+  max-width: 800px;
+  margin: 5px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom , rgb(15, 15, 15), #121212);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom,rgb(24, 39, 39), #11140f, rgb(77, 76, 28));
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+  
+header {
+  background: linear-gradient(rgba(106, 160, 157, 0.5), rgba(0, 0, 0, 0.8)), url(../assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  font-family: 'Playfair Display', serif;
+}
+  
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00d8ff;
+  text-shadow:   1px black;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 1px 1px #0e6962;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00d8ff;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  text-align: center;
+  color: #888;
+  border-top: 2px solid #333;
+  margin-top: 10px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #00d8ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.download {
+  margin: 5px 25%;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: aqua;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.listprojects{
+  min-height: 60vh;
+}
+
+.project{
+  list-style: decimal;
+  border-top: 2px solid #333 ;
+  padding: 10px 20px;
+}
+.project h3{
+  margin: 10px;
+}
+
+.project li{
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.project ul li{
+  list-style: circle;
+  border-bottom: 0;
+}
+
+.nonedisplay{
+  display: none;
+}
+
+.cara{
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(0, 255, 255, 0.7);
+  border-bottom: double #2b4242;
+  margin: 20px;
+  background: linear-gradient(to bottom, rgb(50, 63, 70) , black);
+  border-radius: 10px;
+}
+
+.cara:hover{
+  animation: rgbShadow 3s linear infinite;
+}
